@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <title>Login form</title>
+</head>
+<body>
+  <center><h2>Admin Login form</h2></center>
+  <div class="container" style="background-color: lightgrey;">
+    <div class="row">
+      <div class="col">
+        <form method="POST" action="/adminauth">
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" name= "email" class="form-control" id="exampleInputEmail1" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input
+              type="password" name = "password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <center>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

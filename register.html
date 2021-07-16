@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+</head>
+<body>
+    <form method="POST" action="/candidate_register">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name">
+          </div>
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" class="form-control" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" class="form-control" id="age" name="age">
+          </div>
+          <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+        <div class="form-group">
+          <label for="qualification">Qualification:</label>
+          <input type="text" class="form-control" id="qualification" name="qualification">
+        </div>
+        <div class="form-group">
+            <label for="jobID">jobID:</label>
+            <input type="text" class="form-control" id="jobID" name="jobID">
+          </div>
+          <div class="form-group">
+            <label for="college">College:</label>
+            <input type="text" class="form-control" id="college" name="college">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    
+    <script scr="js/bootstrap.bundle.js"></script>
+</body>
+</html>

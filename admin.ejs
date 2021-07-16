@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dash board</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css" />
+</head>
+
+<body>
+  <center>
+    <h2>Admin dash board</h2>
+  </center>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <table id="myTable" class="display">
+          <thead>
+            <tr>
+              <th>sl.no</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Gender</th>
+              <th>age</th>
+              <th>JobID</th>
+              <th>College</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <% if(bdata.length>=0){
+            bdata.forEach(function(data){
+            %>
+            <tbody>
+              <tr>
+                <td>
+                  <%=data.ID%>
+                </td>
+                <td>
+                  <%=data.name%>
+                </td>
+                <td>
+                  <%=data.email%>
+                </td>
+                <td>
+                  <%=data.phone%>
+                </td>
+                <td>
+                  <%=data.gender%>
+                </td>
+                <td>
+                  <%=data.age%>
+                </td>
+                <td>
+                  <%=data.jobID%>
+                </td>
+                <td>
+                  <%=data.college%>
+                </td>
+                <td>
+                  <% if(data.selected){%> selected<%}else{%>Rejected<%}%>%>
+                </td>
+                <td>
+                  <a href="edit/<%=data.ID%>/<%=data.selected%>">Accept/Reject</a>
+                  <a href="delete/<%=data.ID%>"
+                    onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
+                </td>
+              </tr>
+              <% }) } else{%>
+                <p>nodata found</p>
+                <%}%>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#myTable").DataTable();
+    });
+  </script>
+</body>
+
+</html>
